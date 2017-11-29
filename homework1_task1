@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework1_task1
+{ //Задание 1, программа должна попросить у пользователя некоторые личные данные и вывести их в одну строчку
+    //Павел Сергазиев, С#-1, группа 28.11.17
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Привет!\n\n\n");
+
+            Console.Write("Напиши своё имя - ");
+            string name = Console.ReadLine();
+
+            Console.Write("Напиши свою фамилию - ");
+            string surname = Console.ReadLine();
+
+            Console.Write("Напиши свой возраст - ");
+            string age = Console.ReadLine();
+
+            Console.Write("Напиши свой рост в сантиметрах - ");
+            string height = Console.ReadLine();
+
+            Console.Write("Напиши свой вес в килограммах - ");
+            string weight = Console.ReadLine();
+
+            Console.WriteLine("\n\n\n" + name + " " + surname + ", " + age + " лет, рост - " + height + " см, вес - " + weight + " кг.");//склеивание
+            Console.WriteLine("{0} {1}, {2} лет, рост - {3} см, вес - {4} кг.", name, surname, age, height, weight);//форматированный вывод
+            Console.WriteLine($"{name} {surname}, {age} лет, рост - {height} см, вес - {weight} кг.");//форматированный вывод с интерполяцией
+
+            Console.Write("\nНажми любую клавишу для выхода");
+            Console.ReadKey();
+        }
+    }
+}
