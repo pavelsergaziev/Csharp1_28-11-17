@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using static System.Console;
+
+namespace homework1_task2
+{ //Задание 2, Ввести рост и вес, рассчитать индекс массы тела по приведённой формуле
+    //Павел Сергазиев, С#-1, группа 28.11.17
+    class Program
+    {
+        static void Main()
+        {
+
+            Write("ПРОГРАММА ПОДСЧЁТА ИНДЕКСА МАССЫ ТЕЛА\n\n\n\n");
+
+            Write("Введите ваш рост в метрах - ");
+            double height = Convert.ToDouble(ReadLine());
+
+            Write("Введите ваш вес в килограммах - ");
+            double weight = Convert.ToDouble(ReadLine());
+
+            double massIndex = (weight / (height * height));
+
+            WriteLine("\n\nВаш индекс массы тела равен {0:F2}", massIndex);
+
+            WriteLine("\n\n\nНажмите любую клавишу для выхода");
+            ReadKey();
+
+        }
+    }
+}
